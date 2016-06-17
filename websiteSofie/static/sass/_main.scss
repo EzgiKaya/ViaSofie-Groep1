@@ -1,0 +1,28 @@
+* {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-family: $font-text;
+    font-weight: normal;
+    font-size: 3vm;
+    font-size: 3vmin;
+    text-decoration: none;
+    color: $color-tertiary;
+    line-height: 1.5;
+
+    @include box-sizing(border-box);
+}
+
+script, title {
+    display: none;
+}
+
+sup {
+    display: inline-block;
+}
+
+body {
+    background: $color-secondary;
+}

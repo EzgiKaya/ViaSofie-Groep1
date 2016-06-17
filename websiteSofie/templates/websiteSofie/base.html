@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!--Dit is de html pagina die wordt overgeerfd door alle html paginas-->
+<!DOCTYPE html>
+<html>
+<head>
+{% include "partials/_head.html" %}
+</head>
+<body>
+{% include "partials/_navbar.html" %}
+
+<div class="page">
+  <p class ="break"></p>
+  <div class ="container">
+{% block content %}
+
+{% endblock %}
+  </div>
+  
+</div>
+{% include "partials/_footer.html" %}
+</body>
+</html>

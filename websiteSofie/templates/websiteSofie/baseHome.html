@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!--Base html zonder container-->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../../static/css/slider.css">
+{% include "partials/_head.html" %}
+</head>
+<body>
+  <div class="page">
+{% include "partials/_navbar.html" %}
+
+{% block content %}
+
+{% endblock %}
+  </div>
+{% include "partials/_footer.html" %}
+</body>
+</html>

@@ -1,0 +1,104 @@
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% block content %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<h1 class="welkom_gebruiker">Welkom, {{user.first_name}} {{user.last_name}}</h1>
+
+<ul class="nav nav-tabs">
+  {% if updated %}
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#statussen">Mijn statussen</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews">Schrijf een review</a></li>
+    <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#gegevens">Gegevens aanpassen</a></li>
+  {% else %}
+    <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#statussen">Mijn statussen</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews">Schrijf een review</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#gegevens">Gegevens aanpassen</a></li>
+  {% endif %}
+</ul>
+
+<div class="tab-content">
+  {% if updated %}
+  <div id="statussen" class="tab-pane fade">
+  {% else %}
+  <div id="statussen" class="tab-pane fade in active">
+  {% endif %}
+    <h1>Mijn status</h1>
+    {% for estate in estate_list %}
+    <table class="top">
+      <th>
+        <a href="/pand/{{estate.id}}">Pand:{{estate.referencenumber}} {{estate.adres}} {{estate.house_number}} | Aantal keer bekeken : {{estate.hits}}</a>
+      </th>
+    </table>
+
+    <table class="table table-striped">
+
+        {% if estate.estate_status_set.all %}
+        <thead>
+          <tr>
+            <th>Datum</th>
+            <th>Status</th>
+            <th>Beschrijving</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for status in estate.estate_status_set.all %}
+
+            <tr>
+              <td>{{status.date_placed}}</td>
+              <td>{{status.status_ID.status_name}} </td>
+              <td>{{status.status_ID.description}}</td>
+            </tr>
+            {% endfor %}
+            {% else%}
+              Dit pand heeft nog geen status.
+            {% endif %}
+
+
+
+
+      </tbody>
+    </table>
+
+    <p class="break"></p>
+    {% endfor %}
+    <p class="break"></p>
+  </div>
+
+  <div id="reviews" class="tab-pane fade">
+    <h1>Schrijf een review</h1>
+    {% if messages %}
+    {% for message in messages %}
+    <h3{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h3>
+    {% endfor %}
+    {% else %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table align="center">
+        {{ form }}
+      </table>
+    <input type="submit" value="Insturen" />
+    </form><p class="break"></p>
+    {% endif %}
+  </div>
+
+  {% if updated %}
+    <div id="gegevens" class="tab-pane fade in active">
+  {% else %}
+    <div id="gegevens" class="tab-pane fade">
+  {% endif %}
+    <p class="message">Wachtwoord veranderen? <a href="/resetpassword">Klik hier</a></p>
+    <form action="{% url 'update account' %}" method="post">
+        {% csrf_token %}
+        <table align="center">
+        {{ user_form }}
+        {{ account_form }}
+      </table>
+    <input type="submit" value="Opslaan" />
+    </form><p class="break"></p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+/*.search-box {
+    position: relative;
+    margin-bottom: 4rem;
+
+    button {
+        position: absolute;
+        top: 0; left: 0;
+        margin: .75rem;
+        height: 1rem;
+        width: 1rem;
+        outline: 0;
+        cursor: pointer;
+        background: transparent;
+        background-image: url('../img/icons/search.svg');
+        background-size: contain;
+        background-position: center;
+        @include transition(transform $time-short);
+        @include transform(rotate(90deg));
+
+        &:hover {
+            @include transform(rotate(0deg));
+        }
+    }
+
+    input {
+        outline: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,163 @@
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load humanize %}
+{% block content %}
+<h1>{% trans "Huizen te koop" %}</h1>
+<!--Zoekfilter-->
+<form method="POST" action="{% url 'search_estate' %}">
+  {% csrf_token %}
+  {{ searchform }}
+  <input type="hidden" name="status" value="kopen">
+  <button type="submit" class="btn-searchfilter">{% trans "Zoeken" %}</button>
+</form>
+<!--Gedetailleerde zoekfilter-->
+<button type="button" class="btn-searchfilter" data-toggle="collapse" data-target="#detailsearch">{% trans "Zoekfilters" %}</button>
+<div id="detailsearch" class="collapse">
+  <form id="search_engine" method="GET" action="{% url 'detail_search_estate' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <input type="hidden" name="status" value="kopen">
+        <div class="col-md-6"/>
+          <label class="searchlabel" for="id_adres">{% trans "Straatnaam" %}:</label><input id="id_adres" maxlength="30" name="adres" type="text" placeholder="Straatnaam" />
+          <label class="searchlabel" for="id_area_code">{% trans "Postcode" %}:</label><input id="id_area_code" maxlength="8" name="area_code" type="text" placeholder="Postcode"/>
+        </div>
+        <div class="col-md-6"/>
+          <label class="searchlabel" for="id_town">{% trans "Stad" %}:</label><input id="id_town" maxlength="30" name="town" type="text" placeholder="Stad"/>
+          <label class="searchlabel" for="id_province">{% trans "Provincie" %}:</label><input id="id_province" maxlength="30" name="province" type="text" placeholder="Provincie"/>
+        </div>
+        <div class="col-md-6"/>
+          <label class="searchlabel" for="id_bedrooms">{% trans "Slaapkamers" %}:</label><input id="id_bedrooms" maxlength="1" name="bedroomsmin" type="text" placeholder="min"/><input id="id_bedrooms" maxlength="1" name="bedroomsmax" type="text" placeholder="max"/>
+          <label class="searchlabel" for="id_bathrooms">{% trans "Badkamers" %}:</label><input id="id_bathrooms" maxlength="1" name="bathroomsmin" type="text" placeholder="min"/></label><input id="id_bathrooms" maxlength="1" name="bathroomsmax" type="text" placeholder="max"/>
+        </div>
+        <div class="col-md-6"/>
+          <label class="searchlabel" for="id_bebouwing">{% trans "Bebouwing" %}:</label>
+            <select name="bebouwing">
+              <option value="" selected="selected">------</option>
+              <option value="OPEN">{% trans "Open" %}</option>
+              <option value="HALFOPEN">{% trans "Halfopen" %}</option>
+              <option value="GESLOTEN">{% trans "Gesloten" %}</option>
+            </select>
+          <label class="searchlabel" for="id_type">{% trans "Type" %}:</label>
+            <select name="type">
+              <option value="" selected="selected">------</option>
+              <option value="HUIS">{% trans "Huis" %}</option>
+              <option value="APPARTEMENT">{% trans "Appartement" %}</option>
+              <option value="KAMER/KOT">{% trans "Kamer / Kot" %}</option>
+              <option value="GROND">{% trans "Grond" %}</option>
+              <option value="ANDERE">{% trans "Andere" %}</option>
+        </div>
+        <div class="col-md-6"/>
+          <p>
+            <label class="searchlabel" for="id_pricelgte">{% trans "Prijs omvang" %}:</label>
+            <input type="text" name="range_value" id="amount" readonly style="border:0; color:#0d3532; font-weight:bold;">
+          </p>
+          <div id="slider-range"></div><p class="break"></p>
+        </div>
+      </tr>
+    </table>
+    <div class="col-md-12"/>
+      <button type="submit" class="btn-searchfilter">{% trans "Zoeken" %}</button>
+    </div>
+  </form>
+</div>
+</div>
+<p class="break">
+
+<div class="container">
+{% if string %}
+  <p> {% trans "Geen zoekcriteria ontvangen" %}</p>
+{% endif %}
+<div class="aanbod">
+  {% if kopen_list %}
+    <!--Oplijsting van huizen die voldoen aan zoekcriteria-->
+    <h1>{% trans "Huizen te koop" %} :</h1>
+      {% for estate in kopen_list %}
+        <div class="col-md-6" style="border-color:black;">
+          <ul class="IDK" id="menu">
+            <li>
+              <article>
+                <a href="/pand/{{ estate.id }}">
+                  <div class="polaroid">
+                    <div class="kijkerImg" style="background-image:url('../../media/{{estate.get_estateDisplayImage.0.image}}');">
+                      <div class="container kijkerGegevens">
+                          <h1>{{ estate.town }}</h1>
+                          <h2>{{ estate.adres }} {{ estate.house_number }} </h2>
+                      </div>
+
+                      <div class="container kijkerPrijs">
+                          <p> {% if estate.sale and estate.rent %}
+                                <h2 class="price">
+                                  <p>{% trans "Koopprijs" %}: €{{ estate.sale_price|intcomma }}</p>
+                                  <p>{% trans "Huurprijs" %}: €{{ estate.rent_price|intcomma}}</p>
+                                </h2>
+                              {% elif estate.sale %}
+                                  <h2 class="price">{% trans "Koopprijs" %}: €{{ estate.sale_price|intcomma}} </h2>
+                                {% elif estate.rent %}
+                                  <h2 class="price">{% trans "Huurprijs" %}: €{{ estate.rent_price|intcomma}} </h2>
+                                {% endif %}
+                            </p>
+                      </div>
+
+                      <div class="container kijkerLijn"></div>
+
+                      <div class="container kijkerOppervlakte">
+                        <img class="kijkerLogo ruler" src="{% static "img/ruler.png" %}"/>
+                        <h2 class="surface"> {{estate.surface}} m²</h2>
+                      </div>
+
+                      <div class="container kijkerDetails">
+                        <p class="bRoom">{{ estate.bedrooms }}</p>
+                        <p class="bRoom">{{ estate.bathrooms}}</p>
+                        <img class="kijkerLogo bedrooms" src="{% static "img/bedrooms.png" %}"/>
+                        <img class="kijkerLogo bathrooms" src="{% static "img/bathroom.png" %}"/>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      {% endfor %}
+
+  {% else %}
+    <h2>{% trans "Geen huizen beschikbaar" %}</h2>
+  {% endif %}
+</div>
+</div>
+<div class="container" style="box-shadow:none;background-color:rgba(0,0,0,0);">
+  <div class="pagination">
+    <span class="step-links">
+        {% if kopen_list.has_previous %}
+            <a href="?page={{ kopen_list.previous_page_number }}">{% trans "Vorige" %}</a>
+        {% endif %}
+
+        <span class="current">
+          {% blocktrans with t_num=huren_list.number t_pag_num=huren_list.paginator.num_pages %}
+            Pagina {{ t_num }} van {{ t_pag_num }}
+          {% endblocktrans %}
+        </span>
+
+        {% if kopen_list.has_next %}
+            <a href="?page={{ kopen_list.next_page_number }}">{% trans "Volgende" %}</a>
+        {% endif %}
+    </span>
+  </div>
+</div>
+<script type="text/javascript" src="../../static/js/class-helper.js"></script>
+<script type="text/javascript" src="../../static/js/LazyImage.js"></script>
+<script type="text/javascript" src="../../static/js/tap.js"></script>
+<script type="text/javascript" src="../../static/js/priceRange.js" ></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+{% endblock %}

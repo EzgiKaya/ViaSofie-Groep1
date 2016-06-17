@@ -1,0 +1,14 @@
+<head>
+  <meta http-equiv="refresh" content="5;url=/" />
+</head>
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Foutmelding: 500" %}</h1>
+
+<p>{% trans "Interne server error" %}</p>
+<p>{% trans "Je wordt meteen doorverwezen naar de home pagina." %}</p>
+
+{% endblock %}

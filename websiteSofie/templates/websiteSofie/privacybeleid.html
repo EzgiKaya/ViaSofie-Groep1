@@ -1,0 +1,21 @@
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<img class="privacyicoon" src="{% static "img/privacy2.png" %}" alt ="PricacyLogo" height="85px"><br><h1>Privacybeleid</h1>
+
+{% if privacybeleid_list %}
+
+{% for privacybeleid in privacybeleid_list %}
+
+<p>{{privacybeleid.text_privacybeleid}}</p>
+<br>
+
+{% endfor %}
+
+{% else %}
+  <h2>Geen privacybeleid beschikbaar</h2>
+{% endif %}
+
+{% endblock %}

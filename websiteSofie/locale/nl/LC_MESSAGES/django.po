@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-01 16:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\websiteSofie\forms.py:10
+#: .\websiteSofie\templates\websiteSofie\huren.html:16
+#: .\websiteSofie\templates\websiteSofie\huren.html:45
+#: .\websiteSofie\templates\websiteSofie\kopen.html:13
+#: .\websiteSofie\templates\websiteSofie\kopen.html:42
+#: .\websiteSofie\templates\websiteSofie\results.html:17
+#: .\websiteSofie\templates\websiteSofie\results.html:45
+msgid "Zoeken"
+msgstr ""
+
+#: .\websiteSofie\forms.py:14
+#: .\websiteSofie\templates\partials\_navbar.html:108
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:12
+msgid "E-mailadres"
+msgstr ""
+
+#: .\websiteSofie\forms.py:15
+msgid "Wachtwoord"
+msgstr ""
+
+#: .\websiteSofie\settings.py:124
+msgid "Nederlands"
+msgstr ""
+
+#: .\websiteSofie\settings.py:125
+msgid "Engels"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:31
+msgid "Welcome,"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:36
+msgid "View site"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:41
+msgid "Documentation"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:45
+msgid "Change password"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:47
+msgid "Log out"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:57
+msgid "Home"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:26
+#: .\websiteSofie\templates\partials\_navbar.html:72
+msgid "Contact"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:30
+#: .\websiteSofie\templates\partials\_navbar.html:79
+msgid "Kopen"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:34
+#: .\websiteSofie\templates\partials\_navbar.html:86
+msgid "Huren"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:38
+#: .\websiteSofie\templates\partials\_navbar.html:93
+msgid "Meer"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:44
+#: .\websiteSofie\templates\partials\_navbar.html:101
+msgid "Login"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:48
+#: .\websiteSofie\templates\partials\_navbar.html:138
+msgid "Logout"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:51
+#: .\websiteSofie\templates\partials\_navbar.html:127
+msgid "Account"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:105
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:6
+msgid "Aanmelden"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:110
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:14
+msgid "Password"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:113
+msgid "Wachtwoord vergeten?"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:113
+msgid "Klik hier"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:114
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:17
+msgid "Nog geen account?"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:114
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:17
+msgid "Maak hier uw account aan"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:9
+msgid "Foutmelding: 404"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:11
+msgid "Pagina niet gevonden"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:12
+#: .\websiteSofie\templates\websiteSofie\500.html:12
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:12
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:12
+msgid "Je wordt meteen doorverwezen naar de home pagina."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\500.html:9
+msgid "Foutmelding: 500"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\500.html:11
+msgid "Interne server error"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\contact_succes.html:10
+msgid "Contactformulier"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\contact_succes.html:12
+msgid "Uw Contactformulier is succesvol doorgestuurd"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\ebook_succes.html:10
+msgid "Ebook"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\ebook_succes.html:12
+msgid "Uw ebook is succesvol aangevraagd"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:9
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:9
+msgid "Foutmelding"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:11
+msgid "De combinatie van e-mailadres en wachtwoord is niet gevonden."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:11
+msgid "Dit account is gedeactiveerd."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:53
+#: .\websiteSofie\templates\websiteSofie\kopen.html:50
+msgid "Geen huizen gevonden met zoekcriteria"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_done.html:7
+msgid "Your password was changed."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:11
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:11
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:16
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:44
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:15
+msgid "Change my password"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_complete.html:6
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:8
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:12
+msgid "New password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:14
+msgid "Confirm password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:20
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_done.html:6
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_done.html:8
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:6
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:10
+msgid "Email address:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:10
+msgid "Reset my password"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\results.html:54
+msgid "1 zoekresultaat gevonden : "
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\results.html:56
+msgid "zoekresultaten gevonden : "
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\results.html:62
+msgid "Geen zoekresultaten gevonden :( "
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\subscribe_succes.html:9
+#: .\websiteSofie\templates\websiteSofie\unsubscribe_succes.html:9
+msgid "Nieuwsbrief"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\subscribe_succes.html:11
+msgid "U bent nu ingeschreven voor de nieuwsbrief"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\unsubscribe_succes.html:11
+msgid "U bent uitgeschreven voor de nieuwsbrief"
+msgstr ""

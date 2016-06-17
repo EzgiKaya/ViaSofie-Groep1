@@ -1,0 +1,29 @@
+%clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@mixin box-sizing($p) {
+    -webkit-box-sizing: $p;
+    -moz-box-sizing: $p;
+    box-sizing: $p;
+}
+
+@mixin animation($p...) {
+    -webkit-animation: $p;
+    -moz-animation: $p;
+    animation: $p;
+}
+
+@mixin transition($p...) {
+    -webkit-transition: $p;
+    -moz-transition: $p;
+    transition: $p;
+}
+
+@mixin transform($p...) {
+    -webkit-transform: $p;
+    -moz-transform: $p;
+    transform: $p;
+}

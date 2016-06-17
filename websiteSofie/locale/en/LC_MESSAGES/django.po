@@ -1,0 +1,551 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-06 15:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\websiteSofie\forms.py:14
+#: .\websiteSofie\templates\partials\_navbar.html:109
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:12
+msgid "E-mailadres"
+msgstr "Email adress"
+
+#: .\websiteSofie\forms.py:15
+msgid "Wachtwoord"
+msgstr ""
+
+#: .\websiteSofie\models.py:71
+msgid "OPEN"
+msgstr ""
+
+#: .\websiteSofie\models.py:71
+#: .\websiteSofie\templates\websiteSofie\huren.html:42
+#: .\websiteSofie\templates\websiteSofie\kopen.html:41
+#: .\websiteSofie\templates\websiteSofie\results.html:69
+msgid "Open"
+msgstr ""
+
+#: .\websiteSofie\models.py:72
+msgid "HALFOPEN"
+msgstr ""
+
+#: .\websiteSofie\models.py:72
+#: .\websiteSofie\templates\websiteSofie\huren.html:43
+#: .\websiteSofie\templates\websiteSofie\kopen.html:42
+#: .\websiteSofie\templates\websiteSofie\results.html:70
+msgid "Halfopen"
+msgstr ""
+
+#: .\websiteSofie\models.py:73
+msgid "GESLOTEN"
+msgstr ""
+
+#: .\websiteSofie\models.py:73
+#: .\websiteSofie\templates\websiteSofie\huren.html:44
+#: .\websiteSofie\templates\websiteSofie\kopen.html:43
+#: .\websiteSofie\templates\websiteSofie\results.html:71
+msgid "Gesloten"
+msgstr ""
+
+#: .\websiteSofie\models.py:77
+msgid "HUIS"
+msgstr ""
+
+#: .\websiteSofie\models.py:77
+#: .\websiteSofie\templates\websiteSofie\huren.html:49
+#: .\websiteSofie\templates\websiteSofie\kopen.html:48
+#: .\websiteSofie\templates\websiteSofie\results.html:76
+msgid "Huis"
+msgstr "Home"
+
+#: .\websiteSofie\models.py:78
+msgid "APPARTEMENT"
+msgstr ""
+
+#: .\websiteSofie\models.py:78
+#: .\websiteSofie\templates\websiteSofie\huren.html:50
+#: .\websiteSofie\templates\websiteSofie\kopen.html:49
+#: .\websiteSofie\templates\websiteSofie\results.html:77
+msgid "Appartement"
+msgstr ""
+
+#: .\websiteSofie\models.py:79
+msgid "GROND"
+msgstr ""
+
+#: .\websiteSofie\models.py:79
+#: .\websiteSofie\templates\websiteSofie\huren.html:52
+#: .\websiteSofie\templates\websiteSofie\kopen.html:51
+#: .\websiteSofie\templates\websiteSofie\results.html:79
+msgid "Grond"
+msgstr ""
+
+#: .\websiteSofie\models.py:80
+msgid "KAMER/KOT"
+msgstr "ROOM/DORM"
+
+#: .\websiteSofie\models.py:80
+msgid "Kamer/Kot"
+msgstr "Room/Dorm"
+
+#: .\websiteSofie\models.py:81
+msgid "ANDERE"
+msgstr "OTHER"
+
+#: .\websiteSofie\models.py:81
+#: .\websiteSofie\templates\websiteSofie\huren.html:53
+#: .\websiteSofie\templates\websiteSofie\kopen.html:52
+#: .\websiteSofie\templates\websiteSofie\results.html:80
+msgid "Andere"
+msgstr "Other"
+
+#: .\websiteSofie\settings.py:125
+msgid "Nederlands"
+msgstr "Dutch"
+
+#: .\websiteSofie\settings.py:126
+msgid "Engels"
+msgstr "English"
+
+#: .\websiteSofie\templates\admin\base.html:31
+msgid "Welcome,"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:36
+msgid "View site"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:41
+msgid "Documentation"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:45
+msgid "Change password"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:47
+msgid "Log out"
+msgstr ""
+
+#: .\websiteSofie\templates\admin\base.html:57
+msgid "Home"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:27
+#: .\websiteSofie\templates\partials\_navbar.html:73
+msgid "Contact"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:31
+#: .\websiteSofie\templates\partials\_navbar.html:80
+msgid "Kopen"
+msgstr "Buy"
+
+#: .\websiteSofie\templates\partials\_navbar.html:35
+#: .\websiteSofie\templates\partials\_navbar.html:87
+msgid "Huren"
+msgstr "Rent"
+
+#: .\websiteSofie\templates\partials\_navbar.html:39
+#: .\websiteSofie\templates\partials\_navbar.html:94
+msgid "Meer"
+msgstr "More"
+
+#: .\websiteSofie\templates\partials\_navbar.html:45
+#: .\websiteSofie\templates\partials\_navbar.html:102
+msgid "Login"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:49
+#: .\websiteSofie\templates\partials\_navbar.html:135
+msgid "Logout"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:52
+#: .\websiteSofie\templates\partials\_navbar.html:127
+msgid "Account"
+msgstr ""
+
+#: .\websiteSofie\templates\partials\_navbar.html:106
+#: .\websiteSofie\templates\partials\_navbar.html:113
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:6
+msgid "Aanmelden"
+msgstr "Log in"
+
+#: .\websiteSofie\templates\partials\_navbar.html:111
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:14
+msgid "Password"
+msgstr "Password"
+
+#: .\websiteSofie\templates\partials\_navbar.html:114
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:17
+msgid "Nog geen account?"
+msgstr "Don't have an account?"
+
+#: .\websiteSofie\templates\partials\_navbar.html:114
+#: .\websiteSofie\templates\websiteSofie\loginpage.html:17
+msgid "Maak hier uw account aan"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:9
+msgid "Foutmelding: 404"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:11
+msgid "Pagina niet gevonden"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\404.html:12
+#: .\websiteSofie\templates\websiteSofie\500.html:12
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:12
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:12
+msgid "Je wordt meteen doorverwezen naar de home pagina."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\500.html:9
+msgid "Foutmelding: 500"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\500.html:11
+msgid "Interne server error"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\contact_succes.html:10
+msgid "Contactformulier"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\contact_succes.html:12
+msgid "Uw Contactformulier is succesvol doorgestuurd"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\ebook_succes.html:10
+msgid "Ebook"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\ebook_succes.html:12
+msgid "Uw ebook is succesvol aangevraagd"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:9
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:9
+msgid "Foutmelding"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserAuth.html:11
+msgid "De combinatie van e-mailadres en wachtwoord is niet gevonden."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\errorUserDeactivated.html:11
+msgid "Dit account is gedeactiveerd."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:10
+#: .\websiteSofie\templates\websiteSofie\huren.html:77
+#: .\websiteSofie\templates\websiteSofie\results.html:121
+msgid "Huizen te huur"
+msgstr "Estates for sale"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:16
+#: .\websiteSofie\templates\websiteSofie\huren.html:65
+#: .\websiteSofie\templates\websiteSofie\kopen.html:15
+#: .\websiteSofie\templates\websiteSofie\kopen.html:64
+#: .\websiteSofie\templates\websiteSofie\results.html:18
+#: .\websiteSofie\templates\websiteSofie\results.html:47
+#: .\websiteSofie\templates\websiteSofie\results.html:94
+msgid "Zoeken"
+msgstr "Search"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:19
+#: .\websiteSofie\templates\websiteSofie\kopen.html:18
+msgid "Zoekfilters"
+msgstr "Searchfilters"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:27
+#: .\websiteSofie\templates\websiteSofie\kopen.html:26
+#: .\websiteSofie\templates\websiteSofie\results.html:54
+msgid "Straatnaam"
+msgstr "Street"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:28
+#: .\websiteSofie\templates\websiteSofie\huren.html:93
+#: .\websiteSofie\templates\websiteSofie\kopen.html:27
+#: .\websiteSofie\templates\websiteSofie\kopen.html:93
+#: .\websiteSofie\templates\websiteSofie\more.html:60
+#: .\websiteSofie\templates\websiteSofie\pand.html:43
+#: .\websiteSofie\templates\websiteSofie\results.html:55
+#: .\websiteSofie\templates\websiteSofie\results.html:140
+msgid "Postcode"
+msgstr "Area Code"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:31
+#: .\websiteSofie\templates\websiteSofie\kopen.html:30
+#: .\websiteSofie\templates\websiteSofie\results.html:58
+msgid "Stad"
+msgstr "City"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:32
+#: .\websiteSofie\templates\websiteSofie\kopen.html:31
+#: .\websiteSofie\templates\websiteSofie\pand.html:44
+#: .\websiteSofie\templates\websiteSofie\results.html:59
+msgid "Provincie"
+msgstr "Province"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:35
+#: .\websiteSofie\templates\websiteSofie\huren.html:102
+#: .\websiteSofie\templates\websiteSofie\kopen.html:34
+#: .\websiteSofie\templates\websiteSofie\kopen.html:102
+#: .\websiteSofie\templates\websiteSofie\more.html:69
+#: .\websiteSofie\templates\websiteSofie\pand.html:51
+#: .\websiteSofie\templates\websiteSofie\results.html:62
+#: .\websiteSofie\templates\websiteSofie\results.html:149
+msgid "Slaapkamers"
+msgstr "Bedrooms"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:36
+#: .\websiteSofie\templates\websiteSofie\huren.html:105
+#: .\websiteSofie\templates\websiteSofie\kopen.html:35
+#: .\websiteSofie\templates\websiteSofie\kopen.html:105
+#: .\websiteSofie\templates\websiteSofie\more.html:72
+#: .\websiteSofie\templates\websiteSofie\pand.html:52
+#: .\websiteSofie\templates\websiteSofie\results.html:63
+#: .\websiteSofie\templates\websiteSofie\results.html:152
+msgid "Badkamers"
+msgstr "Bathrooms"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:39
+#: .\websiteSofie\templates\websiteSofie\kopen.html:38
+#: .\websiteSofie\templates\websiteSofie\results.html:66
+msgid "Bebouwing"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:46
+#: .\websiteSofie\templates\websiteSofie\huren.html:96
+#: .\websiteSofie\templates\websiteSofie\kopen.html:45
+#: .\websiteSofie\templates\websiteSofie\kopen.html:96
+#: .\websiteSofie\templates\websiteSofie\more.html:63
+#: .\websiteSofie\templates\websiteSofie\pand.html:50
+#: .\websiteSofie\templates\websiteSofie\results.html:73
+#: .\websiteSofie\templates\websiteSofie\results.html:143
+msgid "Type"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:51
+#: .\websiteSofie\templates\websiteSofie\kopen.html:50
+#: .\websiteSofie\templates\websiteSofie\results.html:78
+msgid "Kamer / Kot"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:57
+#: .\websiteSofie\templates\websiteSofie\kopen.html:56
+#: .\websiteSofie\templates\websiteSofie\results.html:86
+msgid "Prijs omvang"
+msgstr "Price range"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:72
+#: .\websiteSofie\templates\websiteSofie\kopen.html:71
+msgid "Geen zoekcriteria ontvangen"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:90
+#: .\websiteSofie\templates\websiteSofie\kopen.html:90
+#: .\websiteSofie\templates\websiteSofie\more.html:57
+#: .\websiteSofie\templates\websiteSofie\pand.html:41
+#: .\websiteSofie\templates\websiteSofie\results.html:137
+msgid "Adres"
+msgstr "Adress"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:99
+#: .\websiteSofie\templates\websiteSofie\kopen.html:99
+#: .\websiteSofie\templates\websiteSofie\more.html:66
+#: .\websiteSofie\templates\websiteSofie\results.html:146
+msgid "Prijs"
+msgstr "Price"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:108
+#: .\websiteSofie\templates\websiteSofie\kopen.html:108
+#: .\websiteSofie\templates\websiteSofie\more.html:75
+#: .\websiteSofie\templates\websiteSofie\pand.html:53
+#: .\websiteSofie\templates\websiteSofie\results.html:155
+msgid "Oppervlakte"
+msgstr "Surface"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:111
+#: .\websiteSofie\templates\websiteSofie\kopen.html:111
+#: .\websiteSofie\templates\websiteSofie\more.html:78
+#: .\websiteSofie\templates\websiteSofie\pand.html:54
+#: .\websiteSofie\templates\websiteSofie\results.html:158
+msgid "Bewoonbaar oppervlakte"
+msgstr "Habitable surface"
+
+#: .\websiteSofie\templates\websiteSofie\huren.html:118
+#: .\websiteSofie\templates\websiteSofie\kopen.html:118
+msgid "Geen huizen beschikbaar"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\kopen.html:9
+#: .\websiteSofie\templates\websiteSofie\kopen.html:77
+#: .\websiteSofie\templates\websiteSofie\results.html:119
+msgid "Huizen te koop"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:11
+msgid "Terug naar aanbod"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:18
+msgid "Huis in"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:42
+msgid "Huisnummer"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:57
+msgid "Te Koop en te huur"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:59
+msgid "Te Koop"
+msgstr "For Sale"
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:61
+msgid "Te Huur"
+msgstr "For Rent"
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:73
+msgid "Locatie"
+msgstr "Location"
+
+#: .\websiteSofie\templates\websiteSofie\pand.html:74
+msgid "Beschrijving"
+msgstr "Description"
+
+#: .\websiteSofie\templates\websiteSofie\password_change_done.html:7
+msgid "Your password was changed."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:11
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:11
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:16
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_change_form.html:44
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:15
+msgid "Change my password"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_complete.html:9
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:8
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:12
+msgid "New password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:14
+msgid "Confirm password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_confirm.html:20
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_done.html:6
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_done.html:8
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:6
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:10
+msgid "Email address:"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\password_reset_form.html:10
+msgid "Reset my password"
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\results.html:103
+msgid "1 zoekresultaat gevonden : "
+msgstr ""
+
+#: .\websiteSofie\templates\websiteSofie\results.html:105
+msgid "zoekresultaten gevonden : "
+msgstr "search results found : "
+
+#: .\websiteSofie\templates\websiteSofie\results.html:111
+msgid "Geen zoekresultaten gevonden :( "
+msgstr "No search results found :("
+
+#: .\websiteSofie\templates\websiteSofie\subscribe_succes.html:9
+#: .\websiteSofie\templates\websiteSofie\unsubscribe_succes.html:9
+msgid "Nieuwsbrief"
+msgstr "Newsletter"
+
+#: .\websiteSofie\templates\websiteSofie\subscribe_succes.html:11
+msgid "U bent nu ingeschreven voor de nieuwsbrief"
+msgstr "You have been subscribed to the newsletter"
+
+#: .\websiteSofie\templates\websiteSofie\unsubscribe_succes.html:11
+msgid "U bent uitgeschreven voor de nieuwsbrief"
+msgstr ""

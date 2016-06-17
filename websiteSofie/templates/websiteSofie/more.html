@@ -1,0 +1,225 @@
+<!--More pagina opgedeeld in verschillende tabs-->
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load humanize %}
+{% block content %}
+<style type="text/css">
+</style>
+<!--Tabs-->
+
+  <ul class="nav nav-tabs meer">
+    <li class="active"><a data-toggle="tab" href="#referenties">Referenties</a></li>
+    <li><a data-toggle="tab" href="#advies">Advies</a></li>
+    <li><a data-toggle="tab" href="#partners">Partners</a></li>
+    <li><a data-toggle="tab" href="#ebook">E-book</a></li>
+    <li><a data-toggle="tab" href="#subscribe">Nieuwsbrief</a></li>
+  </ul>
+
+<!--Referenties-->
+  <div class="tab-content">
+    <div id="referenties" class="tab-pane fade in active">
+      <h1>Referenties</h1>
+      {% if review_list %}
+
+      <h2>Geschreven Reviews door verkopers</h2>
+
+      {% for review in review_list %}
+
+      <div class="container">
+        <div class="col-sm-8">
+          <p class="partnernaam">{{review.review_title}}</p>
+          <h4>{{review.review_text}}</h4>
+          <h5>{{review.review_rating}} / 5 - {{review.date}} - {{review.user_ID}}</h5>
+          <p class="break"></p>
+        </div>
+      </div>
+
+      <p class="break"></p>
+
+      {% endfor %}
+      {% else %}
+        <h2>Geen reviews beschikbaar</h2>
+      {% endif %}
+
+      {% if referentie_list %}
+        <h2>Verkochte panden</h2>
+      {% for estate in referentie_list %}
+      <div class="col-md-6" style="border-color:black;">
+        <ul class="IDK" id="menu">
+          <li>
+            <article>
+              <a href="/pand/{{ estate.id }}">
+                <div class="polaroid">
+                  <div class="kijkerImg" style="background-image:url('../../media/{{estate.get_estateDisplayImage.0.image}}');">
+                    <div class="container kijkerGegevens">
+                        <h1>{{ estate.town }}</h1>
+                        <h2>{{ estate.adres }} {{ estate.house_number }} </h2>
+                    </div>
+
+                    <div class="container referentieBanner">
+                      {% if estate.sale and estate.rent %}
+                        <p>Verkocht</p>
+                      {% elif estate.rent %}
+                        <p>Verhuurd</p>
+                      {% else %}
+                        <p>Verkocht</p>
+                      {% endif %}
+
+                    </div>
+
+                    <div class="container kijkerPrijs">
+                        <p> {% if estate.sale and estate.rent %}
+                              <h2 class="price">
+                                <p>Koopprijs: €{{ estate.sale_price|intcomma }}</p>
+                                <p>Huurprijs: €{{ estate.rent_price|intcomma}}</p>
+                              </h2>
+                            {% elif estate.sale %}
+                                <h2 class="price">Koopprijs: €{{ estate.sale_price|intcomma}} </h2>
+                              {% elif estate.rent %}
+                                <h2 class="price">Huurprijs: €{{ estate.rent_price|intcomma}} </h2>
+                              {% endif %}
+                          </p>
+                    </div>
+
+                    <div class="container kijkerLijn"></div>
+
+                    <div class="container kijkerOppervlakte">
+                      <img class="kijkerLogo ruler" src="{% static "img/ruler.png" %}"/>
+                      <h2 class="surface"> {{estate.surface}} m²</h2>
+                    </div>
+
+                    <div class="container kijkerDetails">
+                      <p class="bRoom">{{ estate.bedrooms }}</p>
+                      <p class="bRoom">{{ estate.bathrooms}}</p>
+
+                      <img class="kijkerLogo bedrooms" src="{% static "img/bedrooms.png" %}"/>
+                      <img class="kijkerLogo bathrooms" src="{% static "img/bathroom.png" %}"/>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+      {% endfor %}
+
+      {% else %}
+        <h2>Geen referentiepanden beschikbaar</h2>
+      {% endif %}
+    </div>
+
+    <!--Advies-->
+    <div id="advies" class="tab-pane fade">
+      <h1>Advies</h1>
+
+      <h4>Wilt u een woning kopen/huren of verkopen/verhuren dan moet u rekening houden met een hele hoop zaken. Hieronder vindt u een aantal algemene begrippen en FAQ’s van belang bij de verkoop of verhuur.
+        Hebt u vragen over onderstaande topics of staat uw vraag hier niet tussen, aarzel niet om me te contacteren, ik help u graag verder.</h4>
+
+      <p class="break"></p>
+      {% if faq_list %}
+      {% for FAQ in faq_list %}
+      <div class="col-md-12"/>
+      <button class="faq_button" data-toggle="collapse" data-target="#vraag{{FAQ.id}}"><b class="vraag">{{FAQ.vraag}}</b></button>
+      <p class="break"></p>
+      <div id="vraag{{FAQ.id}}" class="collapse">
+      <p class="break"></p>
+      {{FAQ.antwoord}}
+
+
+      </div>
+    </div>
+      {% endfor %}
+      {% else %}
+      <h4> Geen advies beschikbaar </h4>
+      {% endif %}
+      <p class="break"></p>
+      <h4><b>Hebt u nog vragen? Ik help u graag verder!</b></h>
+      <h4>Hebt u vragen over het te koop stellen van een onroerend goed? Wilt u er zeker van zijn dat uw verkoopdossier volledig is?
+      Neem vrijblijvend contact op!</h4>
+      <h5><i>De inlichtingen zoals meegedeeld op deze pagina zijn louter van algemene aard en
+        kunnen geenszins als sluitende professionele juridische adviesverlening aangepast aan specifieke of concrete persoonlijke omstandigheden worden beschouwd.</i></h5>
+  </div>
+<!--Partners-->
+  <div id="partners" class="tab-pane fade">
+    <h1>Partners</h1>
+
+    {% if partner_list %}
+
+    {% for partner in partner_list %}
+    <div class="container">
+      <div class="col-sm-8">
+    <p class="partnernaam">{{partner.name}}</p>
+    <img src="../{{partner.image.url}}" alt="Logo partner" height="200" width="400"/>
+    <p class="break"></p>
+    </div>
+    <div class="col-sm-4">
+      <p class="break"></p>
+    <h4>{{partner.description}}</h4>
+    </div>
+    </div>
+    <p class="break"></p>
+
+    {% endfor %}
+
+    {% else %}
+      <h2>Geen Partners beschikbaar</h2>
+    {% endif %}
+
+  </div>
+<!--Ebook-->
+  <div id="ebook" class="tab-pane fade">
+    <h1>E-book</h1>
+    <p>Schrijf u hier in voor de ebook.</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table align="center">
+        {{ form_ebook }}
+      </table>
+      <input type="submit" value="Verzenden" />
+    </form>
+</div>
+<!--nieuwsbrief-->
+<div id="subscribe" class="tab-pane fade">
+  <h1>Nieuwsbrief</h1>
+  <p>Schrijf u in voor de nieuwsbrief</p>
+  {% if "subscribe" in messages %}
+  {% for message in messages %}
+  <h3{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h3>
+  {% endfor %}
+  {% else %}
+  <form action="/subscribe/" method="post">
+    {% csrf_token %}
+    <table align="center">
+      {{ form_subscriber }}
+    </table>
+    <input type="submit" value="Schrijf je in" />
+    <a href="/unsubscribe" >Uitschrijven voor nieuwsbrief</a>
+  </form>
+  {% endif %}
+</div>
+</div>
+</div>
+<div class="container"style="box-shadow:none;background-color:rgba(0,0,0,0);">
+  <div class="pagination">
+      <span class="step-links">
+          {% if referentie_list.has_previous %}
+              <a href="?page={{ referentie_list.previous_page_number }}">Vorige</a>
+          {% endif %}
+
+          <span class="current">
+              Pagina {{ referentie_list.number }} van {{ referentie_list.paginator.num_pages }}
+          </span>
+
+          {% if referentie_list.has_next %}
+              <a href="?page={{ referentie_list.next_page_number }}">Volgende</a>
+          {% endif %}
+      </span>
+  </div>
+</div>
+<script type="text/javascript" src="../../static/js/class-helper.js"></script>
+<script type="text/javascript" src="../../static/js/LazyImage.js"></script>
+<script type="text/javascript" src="../../static/js/tap.js"></script>
+
+{% endblock %}

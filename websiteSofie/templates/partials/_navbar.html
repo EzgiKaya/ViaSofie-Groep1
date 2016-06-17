@@ -1,0 +1,200 @@
+{% load staticfiles %}
+{% load i18n %}
+
+
+<link rel="stylesheet" type="text/css" href="../static/css/homepage.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="../../static/js/popup.js"></script>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="nav nav-tabs">
+				<img class="logo_small" src="{% static "img/logo3.png" %}" alt="My image" border='0' width='25px' height=auto>
+				<!--DROPDOWN MENU-->
+				<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" width='100px'>Menu <span class="caret"></span>
+					</button>
+
+				  <ul class="dropdown-menu">
+				    <li>
+							<a class="dropmenu" href="/">Home</a>
+						</li>
+
+				    <li>
+							<a class="dropmenu"  href="/contact">{% trans "Contact" %}</a>
+						</li>
+
+				    <li>
+							<a class="dropmenu"  href="/kopen">{% trans "Kopen" %}</a>
+						</li>
+
+						<li>
+							<a class="dropmenu"  href="/huren">{% trans "Huren" %}</a>
+						</li>
+
+						<li>
+							<a class="dropmenu"  href="/more">{% trans "Meer" %}</a>
+						</li>
+
+						<li class="divider"><a></a></li>
+					{% if not user.is_authenticated %}
+					<li>
+						<a class="dropmenu" href="/loginpage">{% trans "Login" %}</a>
+					</li>
+					{% else %}
+					<li>
+						<a class="dropmenu" href="/logout">{% trans "Logout" %}</a>
+					</li>
+					<li>
+						<a class="dropmenu" href="/userPage">{% trans "Account" %}</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+
+				<!--STANDAARD MENU-->
+          <li class="navli">
+						<img class="logo" src="{% static "img/logo3.png" %}" alt="My image" border='0' width='px' height=auto text="Home">
+					</li>
+  				<li class="navli">
+						<a class="button" href="/">
+							<div class="navbutton">
+						<img class="btn_nav" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+							<div class="txt">Home</div>
+						</div>
+						</a>
+					</li>
+
+          <li class="navli">
+						<a class="button" href="/contact" id="navbar_contact_link">
+							<div class="navbutton">
+								<img class="btn_nav" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+								<div class="txt">{% trans "Contact" %}</div>
+							</div>
+						</a>
+					</li>
+
+          <li class="navli">
+						<a class="button" href="/kopen" id="navbar_kopen_link">
+							<div class="navbutton">
+								<img class="btn_nav" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+								<div class="txt">{% trans "Kopen" %}</div>
+							</div>
+						</a>
+					</li>
+
+					<li class="navli">
+						<a class="button" href="/huren">
+							<div class="navbutton">
+								<img class="btn_nav" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+								<div class="txt">{% trans "Huren" %}</div>
+							</div>
+						</a>
+					</li>
+
+					<li class="navli">
+						<a class="button_more" href="/more">
+							<div class="navbutton">
+								<img class="btn_nav_more" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+								<div class="txt">{% trans "Meer" %}</div>
+							</div>
+						</a>
+					</li>
+
+	{% if not user.is_authenticated %}
+					<li class="navli">
+						<a class="button" id="login_link" data-popup-open="popup-1">
+							<div class="navbutton">
+								<img class="btn_nav" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+							<div class="txt">{% trans "Login" %}</div>
+							</div>
+						</a>
+					        <div class="popup" data-popup="popup-1">
+					            <div class="popup-inner">
+					                <h1>{% trans "Aanmelden" %}</h1>
+													<form id="login_form" method="post" action="/login/">
+														{% csrf_token %}
+															{% trans "E-mailadres" %}: <input type="email" name="email" value="" size="50" />
+															<br/>
+															{% trans "Password" %}: <input type="password" name="password" value="" size="50" />
+															<br/>
+															<input type="submit" id="Aanmelden" value= {% trans "Aanmelden" %} />
+													</form>
+					                <a class="popup-close" data-popup-close="popup-1" href="#">X</a>
+					            </div>
+					        </div>
+								</li>
+						{% else %}
+						<li class="navli">
+							<a class="button" href="/userPage">
+								<div class="navbutton">
+									<img class="btn_nav_more" src="{% static "img/button.png" %}" alt="My image" border='0' width='130px' height=auto/>
+									<div class="txt">{% trans "Account" %}</div>
+								</div>
+							</a>
+						</li>
+						<div height=auto>
+							<p class="loginMessage" style="color:white;">
+								 {% trans "Welkom" %},{{user.username}}&nbsp
+								<a class="loginmessagetekst" href="/logout ">&nbsp{% trans "Logout" %}</a>
+
+								{% if request.user.is_superuser %}
+							    <a class="loginmessagetekst" href="/admin ">&nbsp{% trans "Naar adminpagina" %} | </a>
+								{% endif %}
+							</p>
+							<p class="adminpage">
+
+							</p>
+
+						</div>
+						{% endif %}
+						<div class="l_button" height=auto>
+							<form action="{% url 'set_language' %}" method="post">
+						    {% csrf_token %}
+						    <input name="next" type="hidden" value="{{ request.get_full_path }}" />
+						        {% get_current_language as LANGUAGE_CODE %}
+						        {% get_available_languages as LANGUAGES %}
+						        {% get_language_info_list for LANGUAGES as languages %}
+						        {% for language in languages %}
+											{% if not language.code == LANGUAGE_CODE %}
+						                <button
+																		type="submit"
+						                        name="language"
+						                        value="{{ language.code }}"
+																		style="border-radius:3px;"
+																		>
+						                    {{ language.code }}
+						                </button>
+											{% endif %}
+						        {% endfor %}
+							</form>
+						</div>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdownnalogin-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

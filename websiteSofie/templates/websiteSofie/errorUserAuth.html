@@ -1,0 +1,14 @@
+<head>
+  <meta http-equiv="refresh" content="3;url=/" />
+</head>
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Foutmelding" %}</h1>
+
+<p>{% trans "De combinatie van e-mailadres en wachtwoord is niet gevonden." %}</p>
+<p>{% trans "Je wordt meteen doorverwezen naar de home pagina." %}</p>
+
+{% endblock %}

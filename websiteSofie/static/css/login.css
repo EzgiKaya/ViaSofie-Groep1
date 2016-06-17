@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'RopaSans';
+  src: url('../fonts/RopaSansSCPro-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RopaSansItalic';
+  src: url('../fonts/RopaSansPro-Italic.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlanchLight';
+  src: url('../fonts/BLANCH_CONDENSED_LIGHT.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blanch';
+  src: url('../fonts/BLANCH_CONDENSED.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.login-page {
+  width: 80%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  font-size: 125%;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 80%;
+  margin: 0 auto 100px;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "RopaSans";
+  outline: 0;
+  background: #e8e8e8;
+  width: 40%;
+  border: 0;
+  margin: 0 0.75% 1.5%;
+  padding: 1.2%;
+  box-sizing: border-box;
+}
+
+.form h1 {
+  font-family: "Blanch";
+  text-align: center;
+}
+::-webkit-input-placeholder {
+   font-family: "RopaSansItalic";
+   color: #999999;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-family: "RopaSansItalic";
+   color: #999999;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-family: "RopaSansItalic";
+   color: #999999;
+}
+
+:-ms-input-placeholder {
+   font-family: "RopaSansItalic";
+   color: #999999;
+}
+.form button {
+  font-family: "RopaSans";
+  text-transform: uppercase;
+  outline: 0;
+  background: #0d3532;
+  width: 82%;
+  border: 0;
+  padding: 1.5%;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #14524e;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 100%;
+}
+.form .message a {
+  color: #14524e;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e8e8e8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #eac8c6, #fcf7f5);
+  background: -moz-linear-gradient(right, #eac8c6, #fcf7f5);
+  background: -o-linear-gradient(right, #eac8c6, #fcf7f5);
+  background: linear-gradient(to left, #eac8c6, #fcf7f5);
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

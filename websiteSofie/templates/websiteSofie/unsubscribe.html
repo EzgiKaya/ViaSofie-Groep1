@@ -1,0 +1,18 @@
+{% extends 'websiteSofie/base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+  <form action="/unsubscribe/" method="GET">
+    {% csrf_token %}
+    <table align="center">
+      <tr><th><label for="id_email">Email:</label></th><td>
+      <input id="id_email" maxlength="50" name="email" type="email" /></td></tr>
+    </table>
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+
+{% endblock %}

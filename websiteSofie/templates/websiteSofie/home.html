@@ -1,0 +1,175 @@
+<!--Homepagina-->
+{% extends 'websiteSofie/baseHome.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% load humanize %}
+<head>
+
+  <link rel="stylesheet" type="text/css" href="../static/css/homepage.css" />
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+  <script src="../../static/js/googleMaps.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+</head>
+{% block content %}
+  <li class="nav-dots">
+    <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+  </li>
+</ul>
+</div>
+<p class="break"></p>
+
+<!--HomepagePicture-->
+<div class="homepagePic">
+  <img class="homepagepicture" src="../static/img/Homepage.jpg" alt="Homepage" width="100%" height="auto" style="box-shadow: 0px 0px 20px #888888;">
+  <div class="homepageText">
+  <h1>Via Sofie</h1>
+  <p>Verdergaan in vastgoed ...</p>
+</div>
+</div>
+<p class="break"></p>
+<!--Immo in de kijker -->
+
+<div class="container">
+  <h1>Immo in de kijker</h1>
+  <p class="break"></p>
+  {% if immoindekijker_list %}
+
+  <div class="col-md-12" style="border-color:black;align-items:center;">
+
+  {% for pand in immoindekijker_list %}
+
+    <div class="col-md-6">
+      <article>
+        <a href="/pand/{{ pand.id }}">
+          <div class="polaroid">
+            <div class="kijkerImg" style="background-image:url('../../media/{{pand.get_estateDisplayImage.0.image}}');">
+              <div class="container kijkerGegevens">
+                  <h1>{{ pand.town }}</h1>
+                  <h2>{{ pand.adres }} {{ pand.house_number }} </h2>
+              </div>
+
+              <div class="container kijkerPrijs">
+                  <p> {% if pand.sale and pand.rent %}
+                        <h2 class="price">
+                          <p>Koopprijs: €{{ pand.sale_price|intcomma }}</p>
+                          <p>Huurprijs: €{{ pand.rent_price|intcomma}}</p>
+                        </h2>
+                      {% elif pand.sale %}
+                          <h2 class="price">Koopprijs: €{{ pand.sale_price|intcomma}} </h2>
+                        {% elif pand.rent %}
+                          <h2 class="price">Huurprijs: €{{ pand.rent_price|intcomma}} </h2>
+                        {% endif %}
+                    </p>
+              </div>
+
+              <div class="container kijkerLijn"></div>
+
+              <div class="container kijkerOppervlakte">
+                <img class="kijkerLogo ruler" src="{% static "img/ruler.png" %}" />
+                <h2 class="surface"> {{pand.surface}} m²</h2>
+              </div>
+
+              <div class="container kijkerDetails">
+                <p class="bRoom">{{ pand.bedrooms }}</p>
+                <p class="bRoom">{{ pand.bathrooms}}</p>
+
+                <img class="kijkerLogo bedrooms" src="{% static "img/bedrooms.png" %}"/>
+                <img class="kijkerLogo bathrooms" src="{% static "img/bathroom.png" %}"/>
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>    </div>
+
+        <!--<article>
+          <a href="/pand/{{ pand.id }}">
+            <div class="polaroid">
+              <div class="kijkerImg" style="background-image:url('../../media/{{pand.get_estateDisplayImage.0.image}}');">
+                <div class="container kijkerGegevens">
+                    <h1>{{ pand.town }}</h1>
+                    <h2>{{ pand.adres }} {{ pand.house_number }} </h2>
+                </div>
+
+                <div class="container kijkerPrijs">
+                    <p> {% if pand.sale and pand.rent %}
+                          <h2 class="price">
+                            <p>Koopprijs: €{{ pand.sale_price|intcomma }}</p>
+                            <p>Huurprijs: €{{ pand.rent_price|intcomma}}</p>
+                          </h2>
+                        {% elif pand.sale %}
+                            <h2 class="price">Koopprijs: €{{ pand.sale_price|intcomma}} </h2>
+                          {% elif pand.rent %}
+                            <h2 class="price">Huurprijs: €{{ pand.rent_price|intcomma}} </h2>
+                          {% endif %}
+                      </p>
+                </div>
+
+                <div class="container kijkerLijn"></div>
+
+                <div class="container kijkerOppervlakte">
+                  <img class="kijkerLogo ruler" src="{% static "img/ruler.png" %}" />
+                  <h2 class="surface"> {{pand.surface}} m²</h2>
+                </div>
+
+                <div class="container kijkerDetails">
+                  <p class="bRoom">{{ pand.bedrooms }}</p>
+                  <p class="bRoom">{{ pand.bathrooms}}</p>
+
+                  <img class="kijkerLogo bedrooms" src="{% static "img/bedrooms.png" %}"/>
+                  <img class="kijkerLogo bathrooms" src="{% static "img/bathroom.png" %}"/>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>-->
+
+
+{% endfor %}
+</div>
+
+{% else %}
+<h2>Geen immo in de kijker beschikbaar</h2>
+{% endif %}
+</div>
+<p class="break"></p>
+
+<!--Over mij -->
+  <div class ="container">
+    <h1>Over mij</h1>
+    <p class="break"></p>
+      <div class="col-md-4">
+        <img class="instagramProfilePicture"src="{% static "img/sofieAndriesen.png" %}">
+      </div>
+      <div class="col-md-8">
+        <p></p>
+        <p>
+          Sofie is juriste van opleiding (Master in de Rechten). Zij behaalde tevens  een postgraduaat Vastgoedkunde aan de KU Leuven. Zowel op juridisch als bouwtechnisch vlak loodst zij u graag doorheen het vastgoedlandschap en dit met het oog op een succesvolle verkoop of verhuur. Ook voor de opmaak van een taxatieverslag of adviesverlening kan u bij haar terecht.   Sofie neemt de zorg voor de  verkoop of verhuur van uw woning uit handen. Zij regelt bezoeken, zorgt ervoor dat een verkoop- of verhuurdossier wordt opgesteld conform de wettelijke bepalingen en helpt bij een correcte prijszetting van uw pand aan de hand van een taxatieverslag en op basis van  vergelijkingspunten van een eigen opgebouwd databestand. Hebt u vragen of wil u weten wat Sofie voor u kan betekenen, contacteer haar vrijblijvend.
+        </p>
+
+      </div>
+    </div>
+<p class="break"></p>
+
+<div class ="container">
+  <h1 class="maatschappelijk_engagement">Maatschappelijk engagement</h1>
+  <p class="break"></p>
+    <div class="col-md-4">
+      <img class="maatschappelijk_engagement"src="{% static "img/GoedDoel.png" %}">
+
+
+    </div>
+    <div class="col-md-8">
+      <p></p>
+      <p style="text-align:left;">
+        Als onderneming wil Via Sofie iets terugdoen voor de maatschappij. Van elke verkoop gaat een deel van de commissie naar een goed doel.
+        Deze twee projecten worden ondersteund:
+        Moeders voor moeders zet zich in voor de armsten in Vlaanderen : <a href="http://www.moedersvoormoeders.be">Moeders voor moeders</a>
+      </p>
+        <p class="break"/>
+      <p style="text-align:left;">
+        Ondernemers zonder Grenzen, een organisatie die  zich, met een uniek herbebossingsproject inzet voor het welzijn van mens én planeet: <a href="http://www.ozg.be">Ondernemers voor Grenzen</a>.
+        Laat gerust weten welk project  u mee een duwtje in de rug wilt geven!
+      </p>
+    </div>
+  </div>
+{% endblock %}

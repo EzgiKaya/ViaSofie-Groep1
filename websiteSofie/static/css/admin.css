@@ -1,0 +1,91 @@
+/*FONTS*/
+@font-face {
+  font-family: 'RopaSans';
+  src: url('../fonts/RopaSansSCPro-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RopaSansItalic';
+  src: url('../fonts/RopaSansPro-Italic.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlanchLight';
+  src: url('../fonts/BLANCH_CONDENSED_LIGHT.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Blanch';
+  src: url('../fonts/BLANCH_CONDENSED.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body, html, .module {
+  background: #e6e6e6 !important;
+}
+
+* {
+  font-family: 'RopaSans';
+}
+
+div.breadcrumbs, #header, #toolbar, .inline-group h2 {
+  background-color: #0d3532 !important;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+  background-color: #0d3532 !important;
+  color: white !important;
+}
+
+#header img {
+  height: 90px;
+}
+
+#recent-actions-module {
+  background: white !important;
+}
+
+.module caption {
+  background-color: #0d3532 !important;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#toolbar, #changelist-filter {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: 0 !important;
+}
+
+.module h2 {
+  background-color: #0d3532 !important;
+  color: white !important;
+}
+#header {
+    width: auto;
+    height: 80px;
+    padding: 10px 40px;
+    background: #417690;
+    line-height: 40px;
+    color: #ffc;
+    overflow: hidden;
+}
+ul.messagelist li {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px 10px 10px 65px;
+    margin: 0 0 10px 0;
+    background: #eac8c6 url(../img/favicon.ico) 40px 12px no-repeat;
+    background-size: 16px auto;
+    color: #333;
+}
+td, th {
+    font-size: 18px;
+    line-height: 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 15px;
+    font-family: 'Blanch';
+}

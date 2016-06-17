@@ -1,0 +1,21 @@
+<!--Loginpagina mobiel-->
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "Aanmelden" %}</h1>
+<form id="login_form" method="post" action="/login/">
+  {% csrf_token %}
+    {% if form.errors %}
+    {{ form.errors}}
+    {% endif %}
+    {% trans "E-mailadres" %}: <input type="email" name="email" value="" />
+    <p class="break"></p>
+    {% trans "Password" %}: <input type="password" name="password" value="" />
+    <p class="break"></p>
+    <input type="submit" value="Aanmelden" />
+    <p class="message">{% trans "Wachtwoord vergeten?" %} <a href="/resetpassword">{% trans "Klik hier" %}</a></p>
+</form>
+
+
+  {% endblock %}

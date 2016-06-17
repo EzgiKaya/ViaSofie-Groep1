@@ -1,0 +1,106 @@
+.image-box {
+    margin-top: 1.5rem;
+    margin-bottom: 10rem;
+    background: $color-quartiary;
+    @extend %clearfix;
+
+    .image-box__image {
+        float: left;
+        position: relative;
+        height: 70vh;
+        width: 100%;
+    }
+
+    .image-box__largeslides, .image-box__largeslide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-box__largeslide {
+        position: absolute;
+        top: 0; left: 0;
+        background-size: cover;
+        background-position: center;
+        @include animation(fadeOut $time-short linear forwards);
+        &.current-slide {
+            @include animation(fadeIn $time-short linear forwards);
+        }
+    }
+
+    .image-box__slides {
+        position: absolute;
+        bottom: -9vw;
+        left: 0;
+        width: 80vw;
+        @extend %clearfix;
+    }
+
+    .image-box__slide {
+        float: left;
+        margin-left: .5rem;
+        width: 10vw;
+        height: 8vw;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .image-box__information {
+        float: right;
+        position: relative;
+        padding: 1.5rem;
+        width: 50%;
+        height: 100vh;
+    }
+
+    .bottom-stick {
+        position: absolute;
+        bottom: 0; left: 0;
+        padding: 1.5rem;
+        width: 100%;
+        @extend %clearfix;
+
+        span {
+            float: left;
+            width: calc(100% / 3 - .1px);
+            text-align: center;
+
+            &:first-child { text-align: left; }
+            &:last-child { text-align: right; }
+        }
+    }
+    /*
+    @media all and (max-width: $query-medium) {
+        margin-bottom: 2rem;
+
+        .image-box__image, .image-box__information {
+            width: 100%;
+        }
+
+        .image-box__information {
+            height: auto;
+        }
+
+        .image-box__slides {
+            bottom: .5rem;
+            left: .5rem;
+            width: 100%;
+        }
+    }*/
+}
+
+.image-box.has-small {
+    margin-bottom: 2rem;
+
+    .image-box__image {
+        width: 30%;
+    }
+
+    .image-box__information {
+        width: 50%;
+        height: 50vh;
+    }
+}

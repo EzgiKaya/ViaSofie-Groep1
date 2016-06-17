@@ -1,0 +1,22 @@
+<!--Disclaimer pagina-->
+{% extends 'websiteSofie/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<img class="privacyicoon" src="{% static "img/privacy2.png" %}" alt ="PricacyLogo" height="85px"><br><h1>Disclaimer</h1>
+
+
+{% if disclaimer_list %}
+
+{% for disclaimer in disclaimer_list %}
+
+<p>{{disclaimer.text_disclaimer}}</p>
+<br>
+
+{% endfor %}
+
+{% else %}
+  <h2>no disclaimer available</h2>
+{% endif %}
+
+{% endblock %}
